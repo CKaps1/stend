@@ -1,0 +1,31 @@
+{
+  "ssl": {
+    "cert": "/common/cert.pem",
+    "key": "/common/key.pem"
+  },
+  "listeners": [
+    {
+      "address": "127.0.0.1",
+      "port": 40080,
+      "https": true
+    }
+  ],
+  "db_clients": [
+    {
+      "name": "default",
+      "rdbms": "postgresql",
+      "host": "/run/postgresql",
+      "port": 5432,
+      "dbname": "stend",
+      "user": "stend",
+      "passwd": "8fhwrhgi",
+      "is_fast": true,
+      "connection_number": 1
+    }
+  ],
+  "plugins": [
+    {
+      "name": "AuthenticationProvider"
+    }
+  ]
+}
